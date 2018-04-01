@@ -20,11 +20,11 @@ Title = "Home"
 
 ## Social Accounts
 [params.social]
-    github = "https://github.com/MohammedAlsayed"
+    github = "MohammedAlsayed"
    # instagram = "<username>"
    # xing = "<username>"
-    linkedin = "linkedin.com/in/mohammed-al-sayed-711908107"
-    twitter = "https://twitter.com/mmsay3d?s=09"
+    linkedin = "mohammed-al-sayed-711908107/"
+    twitter = "mmsay3d?s=09"
    # facebook = "<username>"
    # stackoverflow = "<username>"
     email = "mohamed.mo.alsayed@gmail.com"
