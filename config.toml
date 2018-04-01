@@ -1,4 +1,42 @@
-baseURL = "https://mohammedalsayed.github.io/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "hyde-hyde"
+## Basic Configuration
+baseurl = "https://mohammedalsayed.github.io/"
+languageCode = "en"
+Title = "Home"
+
+## Hugo Built-in Features
+# disqusShortname = ""
+# googleAnalytics = ""
+# enableRobotsTXT = true
+
+## Site Settings
+[params]
+    author = "Mohammed Alsayed"
+    title = "Title"
+    description = "Mohammed Alsayed"
+    authorimage = "/img/hugo.png"
+    dateformat = "Jan 2, 2006"
+    highlightjs = true
+    # highlightjsstyle = "github"
+
+## Social Accounts
+[params.social]
+    github = "https://github.com/MohammedAlsayed"
+   # instagram = "<username>"
+   # xing = "<username>"
+    linkedin = "linkedin.com/in/mohammed-al-sayed-711908107"
+    twitter = "https://twitter.com/mmsay3d?s=09"
+   # facebook = "<username>"
+   # stackoverflow = "<username>"
+    email = "mohamed.mo.alsayed@gmail.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 200
+    url = "/about/"
