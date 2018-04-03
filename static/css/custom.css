@@ -46,8 +46,12 @@ pre
 
 .hljs {
     white-space: pre;
-    
+    direction: ltr;
     overflow-x: auto; /* no line wrapping */
+}
+
+.hljs-string {
+    color: lightblue
 }
 
 pre,
