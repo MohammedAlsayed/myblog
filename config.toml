@@ -5,7 +5,7 @@ Title = "Home"
 
 ## Hugo Built-in Features
 # disqusShortname = ""
-# googleAnalytics = ""
+googleAnalytics = "UA-116949903-1"
 # enableRobotsTXT = true
 
 ## Site Settings

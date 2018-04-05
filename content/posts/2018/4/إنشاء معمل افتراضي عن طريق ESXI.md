@@ -2,6 +2,10 @@
 title: "إنشاء معمل افتراضي عن طريق ESXI"
 date: 2018-04-04T23:02:44+03:00
 draft: false
+categories : [
+    "Development",
+    "golang",
+]
 rtl: true
 ---
 
