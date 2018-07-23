@@ -1,7 +1,7 @@
 ---
 title: "Usefull Linux Cmds"
 date: 2018-07-23T13:42:44+03:00
-draft: true
+draft: false
 rtl: false
 ---
 
