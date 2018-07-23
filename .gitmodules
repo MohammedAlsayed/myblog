@@ -1,4 +1,3 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:MohammedAlsayed/MohammedAlsayed.github.io.git
-	branch = master
+[submodule "MohammedAlsayed.github.io"]
+	path = MohammedAlsayed.github.io
+	url = https://github.com/MohammedAlsayed/MohammedAlsayed.github.io.git
