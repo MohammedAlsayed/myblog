@@ -61,3 +61,18 @@ add the following:
 
     host *
 	    ForwardAgent yes
+
+
+## Creating Patch file
+
+create file1 with size = 1024*10 bytes:
+
+    dd bs=1024 count=10 if=/dev/zero of=emtpy/file1
+    head -c 1000 < /dev/urandom > text1
+
+creating patch for file1 and applying it:
+    
+    diff file1 file2 > diff
+    patch file1 diff
+
+file1 is now = file2
