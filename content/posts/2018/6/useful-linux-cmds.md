@@ -27,6 +27,10 @@ Instead of doing the long ssh copy procedure this command does it for you.
     ssh-copy-id username@server-ip
     ssh-copy-id msayed@192.168.100.20
 
+then you can, without prompting you password
+
+    ssh msayed@192.168.100.20
+
 ### ssh hostname
 
 Instead of remembring the username and ip address of every server, you can assign it an alias and ssh it with that alias.
