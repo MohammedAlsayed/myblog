@@ -1,7 +1,8 @@
 ---
-title: "Useful Linux Cmds"
-date: 2018-07-23T13:04:44+03:00
+title: "Usefull Linux Cmds"
+date: 2018-07-23T13:42:44+03:00
 draft: true
+rtl: false
 ---
 
 ## Introduction
@@ -26,10 +27,6 @@ Instead of doing the long ssh copy procedure this command does it for you.
 
     ssh-copy-id username@server-ip
     ssh-copy-id msayed@192.168.100.20
-
-then you can, without prompting you password
-
-    ssh msayed@192.168.100.20
 
 ### ssh hostname
 
