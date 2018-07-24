@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home</title>
+    <link>https://www.mmsayed.com/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Jul 2018 15:30:19 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.mmsayed.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kafka Useful Cmds</title>
+      <link>https://www.mmsayed.com/posts/2018/7/kafka-useful-cmds/</link>
+      <pubDate>Mon, 23 Jul 2018 15:30:19 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/7/kafka-useful-cmds/</guid>
+      <description>Start Kafka confluent start  OR
+zookeeper-server-start ~/Downloads/confluent-4.0.0/etc/kafka/zookeeper.properties&amp;amp; kafka-server-start ~/Downloads/confluent-4.0.0/etc/kafka/server.properties&amp;amp;  If using Avro:
+schema-registry-start ~/Downloads/confluent-4.0.0/etc/schema-registry/schema-registry.properties&amp;amp;  Topics kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test kafka-topics --delete --zookeeper localhost:2181 --topic test kafka-topics --list --zookeeper localhost:2181  to describe info of a topic (leader, #partitions, #replications etc)
+kafka-topics --describe --zookeeper localhost:2181 --topic test  Console kafka-console-producer --broker-list localhost:9092 --topic test kafka-console-consumer --bootstrap-server localhost:9092 --topic test  If serialization needed for consumer use:</description>
+    </item>
+    
+    <item>
+      <title>Usefull Linux Cmds</title>
+      <link>https://www.mmsayed.com/posts/2018/7/usefull-linux-cmds/</link>
+      <pubDate>Mon, 23 Jul 2018 13:42:44 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/7/usefull-linux-cmds/</guid>
+      <description>Introduction The following commands I found useful while working. This blog will be updated continuosly.
+sshfs This commands syncs a folder in a server with your local directory
+sshfs username@server-ip:/folder/path/in/the/server /local/path e.g: sshfs root@libvirt:/root/go/src/wirefilter.com/ .  If you finished, you can unmount the folder.
+umount -f wirefilter.com  ssh-copy-id Instead of doing the long ssh copy procedure this command does it for you.
+ssh-copy-id username@server-ip ssh-copy-id msayed@192.168.100.20  ssh hostname Instead of remembring the username and ip address of every server, you can assign it an alias and ssh it with that alias.</description>
+    </item>
+    
+    <item>
+      <title>إنشاء سيرفر محادثات خاص بالبيت</title>
+      <link>https://www.mmsayed.com/posts/2018/4/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D8%B3%D9%8A%D8%B1%D9%81%D8%B1-%D9%85%D8%AD%D8%A7%D8%AF%D8%AB%D8%A7%D8%AA-%D8%AE%D8%A7%D8%B5-%D8%A8%D8%A7%D9%84%D8%A8%D9%8A%D8%AA/</link>
+      <pubDate>Thu, 05 Apr 2018 23:50:20 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/4/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D8%B3%D9%8A%D8%B1%D9%81%D8%B1-%D9%85%D8%AD%D8%A7%D8%AF%D8%AB%D8%A7%D8%AA-%D8%AE%D8%A7%D8%B5-%D8%A8%D8%A7%D9%84%D8%A8%D9%8A%D8%AA/</guid>
+      <description>#مقدمة
+في هذه المشاركة سوف أشرح طريقة إنشاء سيرفر محادثات٬ مع إمكانية دخول عليه
+ من تطبيق خاص للأندوريد والآيفون من المتصفح من برنامج على جهازك اللابتوب  وأيضًا سأتطرق إلى كيف يمكن الدخول على سيرفر المحادثات من خارج شبكة البيت٬ بحيث أنه يمكنك اعتماد السيرفر كبرنامج محادثات سري لك ولمن تحب.
+الخيارات المتاحة برامج المحادثات المفتوحة المصدر التي كانت تستحق الاطلاع عليها اثنان
+ chat rocket روكيت شات mattermost ماتر موست  وبعد المقارنة٬ وجدت روكيت شات أفضل من ماتر موست لعدة أسباب:</description>
+    </item>
+    
+    <item>
+      <title>إنشاء معمل افتراضي عن طريق ESXI</title>
+      <link>https://www.mmsayed.com/posts/2018/4/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D9%85%D8%B9%D9%85%D9%84-%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A-%D8%B9%D9%86-%D8%B7%D8%B1%D9%8A%D9%82-esxi/</link>
+      <pubDate>Wed, 04 Apr 2018 23:02:44 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/4/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D9%85%D8%B9%D9%85%D9%84-%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A-%D8%B9%D9%86-%D8%B7%D8%B1%D9%8A%D9%82-esxi/</guid>
+      <description>مقدمة في هذه المشاركة سوف نشرح عن المعمل الافتراضي وكيف يمكن إنشاء معمل افتراضي virtualization lab عن طريق برنامج vmware esxi وأقصد بالمعمل الافتراضي تشغيل عدة أنظمة في جهاز واحد.
+الخيارات المتاحة هناك معملين افتراضيين قمت بتجربتهم٬ وكليهما مجاني
+١- oracle virtual box اوراكل
+٢- vmware esxi فيم وير او VMware vSphere Hypervisor
+مميزات فيم وير عن أوراكل:
+ أنه يمكنك الدخول على نظام التشغيل عن بعد ببرنامج vSphere client هذه أهم ميزة شدتني في فيم وير ٬ لكن للأسف لا يوجد إصدار خاص للماك٬ لكن هناك بديل٬ وذلك بالدخول عليه من متصفح الويب.</description>
+    </item>
+    
+    <item>
+      <title>كيف تجعل مدونتك تدعم right-to-left html</title>
+      <link>https://www.mmsayed.com/posts/2018/4/%D9%83%D9%8A%D9%81-%D8%AA%D8%AC%D8%B9%D9%84-%D9%85%D8%AF%D9%88%D9%86%D8%AA%D9%83-%D8%AA%D8%AF%D8%B9%D9%85-rtl/</link>
+      <pubDate>Tue, 03 Apr 2018 07:31:53 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/4/%D9%83%D9%8A%D9%81-%D8%AA%D8%AC%D8%B9%D9%84-%D9%85%D8%AF%D9%88%D9%86%D8%AA%D9%83-%D8%AA%D8%AF%D8%B9%D9%85-rtl/</guid>
+      <description>مقدمة في هذه المشاركة سأشرح طريقة التعديل في إعدادات hugo حتى تدعم صفحاتها من اليمين لليسار كما تحتاج اللغة العربية والأردو والهيبرو وغيرها من اللغات حتى تعرض في المتصفح بشكل سليم٬ سأقوم بتعديلات في الملفات الأصلية وذلك غير محبذ بشكل عام في عالم البرمجة. ولكن بسبب طريقة تثبيتي ل hugo بشكل مختلف٬ لمشاهدة طريقتي ولذلك ستكون تعديلاتي على الملفات الأصلية
+أولا: افتح: myblog/archetypes/default.md
+--- title: &amp;quot;{{ replace .Name &amp;quot;-&amp;quot; &amp;quot; &amp;quot; | title }}&amp;quot; date: {{ .</description>
+    </item>
+    
+    <item>
+      <title>كيف تنشئ مدونتك الخاصة</title>
+      <link>https://www.mmsayed.com/posts/2018/4/%D9%83%D9%8A%D9%81-%D8%AA%D9%86%D8%B4%D8%A6-%D9%85%D8%AF%D9%88%D9%86%D8%AA%D9%83-%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9/</link>
+      <pubDate>Sun, 01 Apr 2018 13:48:46 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/4/%D9%83%D9%8A%D9%81-%D8%AA%D9%86%D8%B4%D8%A6-%D9%85%D8%AF%D9%88%D9%86%D8%AA%D9%83-%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9/</guid>
+      <description>مقدمة في هذه المشاركة سوف أشرح طريقة إنشاء مدونة خاصة عن طريق التقنيات التالية :
+ hugo وسوف نستخدمه لانشاء المدونة github وسوف نستخدمه لتشغيل الموقع الخاص فيك على الانترنت خبرة مع cmd  ثم سنتطرق إلى إنشاء دومين خاص بالموقع (yourname.com) عن طريق موقع godaddy
+المتطلبات:
+ حساب في github تنزيل hugo على الجهاز ويمكن معرفة ذلك عن طريق موقعهم بطاقة فيزا لشراء اسم النطاق عن طريق موقع godaddy  لماذا hugo ?</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://www.mmsayed.com/about/</link>
+      <pubDate>Sat, 31 Mar 2018 21:30:55 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/about/</guid>
+      <description>Mohammed Alsayed earned his bacholres degree in software engineering from King Fahd University of Petroleum and Minerals. He is now working at WireFilter in Riyadh.
+Some of Mohammed&amp;rsquo;s Specialites:
+ Machine Learning Web Development Distributed Systems (Kafka)  Programming Languages Mohammed Master&amp;rsquo;s:
+ Java Golang Python  </description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://www.mmsayed.com/posts/2018/3/my-first-post/</link>
+      <pubDate>Sat, 31 Mar 2018 21:30:55 +0300</pubDate>
+      
+      <guid>https://www.mmsayed.com/posts/2018/3/my-first-post/</guid>
+      <description>Hello World This is my first blog site that I made in my ever life. The technologies used are hugo for static site generating and github for hosting. Mr. Rayed my manager in the company inspired me with this great idea. Many thanks to Mr. Rayed. Maybe my next blog will be on how I made this blog but in arabic. I also have some other topics that I would like to include in the few next days.</description>
+    </item>
+    
+  </channel>
+</rss>

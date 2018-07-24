@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.37.1" />
+    
+    <title>Kafka Useful Cmds &middot; Home</title>
+    <meta content="Kafka Useful Cmds - Home" property="og:title">
+    <meta content=" - " property="og:description">    
+    <!-- CSS --> 
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.mmsayed.com/css/print.css" media="print">
+    <link rel="stylesheet" href="https://www.mmsayed.com/css/poole.css">
+    <link rel="stylesheet" href="https://www.mmsayed.com/css/hyde.css">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- highlight.js--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="https://www.mmsayed.com/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+	</head>
+    <body>
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">
+			<a href="https://www.mmsayed.com/"><h1 class="brand">Home</h1></a>
+			 <img src="/img/hugo.png" alt="Author Image" class="img-circle headshot center"> 
+			<p class="lead">
+				 Mohammed Alsayed 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/about/"> <span>About</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	<a href="https://twitter.com/mmsay3d?s=09"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://github.com/MohammedAlsayed"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/mohammed-al-sayed-711908107/"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:mohamed.mo.alsayed@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">&copy; 2018 Mohammed Alsayed.
+        <a href="https://creativecommons.org/licenses/by/4.0">Some Rights Reserved</a>.<br/>Built with <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            
+<div class="post">
+    <h1>Kafka Useful Cmds</h1>
+    
+    <div class="col-sm-12 col-md-12">
+      <span class="text-left post-date meta">
+              
+         
+          <i class="fas fa-calendar-alt"></i> Jul 23, 2018
+        
+        
+        
+        
+        </span>  
+    </div>    
+    
+    
+
+<h2 id="start-kafka">Start Kafka</h2>
+
+<pre><code>confluent start
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>zookeeper-server-start ~/Downloads/confluent-4.0.0/etc/kafka/zookeeper.properties&amp;
+kafka-server-start ~/Downloads/confluent-4.0.0/etc/kafka/server.properties&amp;
+</code></pre>
+
+<p>If using Avro:</p>
+
+<pre><code>schema-registry-start ~/Downloads/confluent-4.0.0/etc/schema-registry/schema-registry.properties&amp;
+</code></pre>
+
+<h2 id="topics">Topics</h2>
+
+<pre><code>kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+kafka-topics --delete --zookeeper localhost:2181 --topic test
+kafka-topics --list --zookeeper localhost:2181
+</code></pre>
+
+<p>to describe info of a topic (leader, #partitions, #replications etc)</p>
+
+<pre><code>kafka-topics --describe --zookeeper localhost:2181 --topic test
+</code></pre>
+
+<h2 id="console">Console</h2>
+
+<pre><code>kafka-console-producer --broker-list localhost:9092 --topic test
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test
+</code></pre>
+
+<p>If serialization needed for consumer use:</p>
+
+<pre><code>kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic benchmark-test-out \
+--from-beginning \
+--formatter kafka.tools.DefaultMessageFormatter \
+--property print.key=true \
+--property print.value=true \
+--property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+--property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+kafka-avro-console-producer \
+        --broker-list localhost:9092 --topic avro-test \
+        --property value.schema='{&quot;namespace&quot;: &quot;com.WireFilter.avro&quot;,
+&quot;type&quot;: &quot;record&quot;,
+&quot;name&quot;: &quot;LogRecord&quot;,
+&quot;fields&quot;: [
+    {&quot;name&quot;: &quot;timestamp&quot;, &quot;type&quot;: &quot;double&quot;},
+    {&quot;name&quot;: &quot;ipSource&quot;, &quot;type&quot;: &quot;string&quot;},
+    {&quot;name&quot;: &quot;tcpStatus&quot;, &quot;type&quot;: &quot;string&quot;},
+    {&quot;name&quot;: &quot;requestType&quot;, &quot;type&quot;: &quot;string&quot;},
+    {&quot;name&quot;: &quot;destinationUrl&quot;, &quot;type&quot;: &quot;string&quot;},
+    {&quot;name&quot;: &quot;destinationIp&quot;, &quot;type&quot;: &quot;string&quot;}
+]
+}'   &lt; /Users/malsayed/workspace/access-log-reporter/access-log.avro
+</code></pre>
+
+<h2 id="important-settings">Important settings</h2>
+
+<p>Change log retention time, to remove files in the server</p>
+
+<pre><code>vi ~/Downloads/confluent-4.0.0/etc/kafka/server.properties
+</code></pre>
+
+<p>add:</p>
+
+<pre><code>log.retention.ms = 1000
+</code></pre>
+
+<p>then:</p>
+
+<pre><code>kafka-server-stop
+kafka-server-start ~/Downloads/confluent-4.0.0/etc/kafka/server.properties&amp;
+</code></pre>
+
+<p>OR clean kafka log dir (specified by the log.dir attribute in kafka config file ) as well the zookeeper data.</p>
+
+<h2 id="monitoring-kafka-with-jmx">Monitoring Kafka with JMX</h2>
+
+<p><a href="https://www.robustperception.io/monitoring-kafka-with-prometheus/">https://www.robustperception.io/monitoring-kafka-with-prometheus/</a></p>
+
+<h2 id="running-application">Running application</h2>
+
+<pre><code>java -cp target/access-log-reporter-1.0-SNAPSHOT.jar com.WireFilter.app.App
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>mvn exec:java -Dexec.mainClass=&quot;com.mycompany.app.App&quot; 
+</code></pre>
+
+<h2 id="running-jmx-with-java">Running jmx with java.</h2>
+
+<pre><code>KAFKA_OPTS=&quot;$KAFKA_OPTS -javaagent:$PWD/Downloads/prometheus_kafka/jmx_prometheus_javaagent-0.6.jar=7071:$PWD/Downloads/prometheus_kafka/kafka-0-8-2.yml&quot; \
+
+kafka-server-start ~/Downloads/confluent-4.0.0/etc/kafka/server.properties&amp;
+
+java -jar /Users/malsayed/workspace/access-log-reporter/target/access-log-reporter-1.0-SNAPSHOT.jar
+
+java -javaagent:/Users/malsayed/Downloads/prometheus_kafka/jmx_prometheus_javaagent-0.6.jar=8080:/Users/malsayed/Downloads/prometheus_kafka/my-application.yml -jar /Users/malsayed/workspace/access-log-reporter/target/access-log-reporter-1.0-SNAPSHOT.jar  com.WireFilter.app.StreamAnalyzer
+
+
+
+      &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+        &lt;version&gt;1.7.25&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+        &lt;version&gt;1.7.25&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre>
+
+  </div>
+
+
+            <div class="footer">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+
+            </div>
+        </div>
+        
+        
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-116949903-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+        
+    </body>
+</html>
