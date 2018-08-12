@@ -4,7 +4,7 @@ languageCode = "en"
 Title = "Home"
 
 ## Hugo Built-in Features
-# disqusShortname = ""
+disqusShortname = "mmsayed"
 googleAnalytics = "UA-116949903-1"
 # enableRobotsTXT = true
 
@@ -23,7 +23,7 @@ googleAnalytics = "UA-116949903-1"
     github = "MohammedAlsayed"
    # instagram = "<username>"
    # xing = "<username>"
-    linkedin = "mohammed-al-sayed-711908107/"
+    linkedin = "mmsayed/"
     twitter = "mmsay3d?s=09"
    # facebook = "<username>"
    # stackoverflow = "<username>"
