@@ -92,4 +92,4 @@ Then after increasing the hard drive, increase the logical volumes:
     ....
         ├─pve-data                 253:5    0 202.3G  0 lvm  
 
-Finally `pve-swap`, `pve-root`, `pve-data` LVS increased. Hope this will help others!
+Finally `pve-swap`, `pve-root`, `pve-data` LVS increased. Hope this will help others!.
