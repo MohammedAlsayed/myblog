@@ -28,7 +28,7 @@ I know that installing proxmox is straight forward. First, burning the image on 
 
     VBoxManage clonehd proxmox.vdi proxmox.img --format RAW
 
-3- Next burned the `proxmox.img` on my hard drive with `dd`. Here is how:
+3- Next I burned the `proxmox.img` on my hard drive with `dd`. Here is how:
 
 - Finded the hard drive name thru `diskutil list`. Which is /dev/disk2
 - Formated the disk `diskutil eraseDisk FREE pve /dev/disk2`
