@@ -28,7 +28,7 @@ I know that installing proxmox is straight forward. First, burning the image on 
 
     VBoxManage clonehd proxmox.vdi proxmox.img --format RAW
 
-3- Next burned the `proxmox.img` on my hard drive with `dd`. Here is how:
+3- Next I burned the `proxmox.img` on my hard drive with `dd`. Here is how:
 
 - Finded the hard drive name thru `diskutil list`. Which is /dev/disk2
 - Formated the disk `diskutil eraseDisk FREE pve /dev/disk2`
@@ -92,4 +92,4 @@ Then after increasing the hard drive, increase the logical volumes:
     ....
         ├─pve-data                 253:5    0 202.3G  0 lvm  
 
-Finally `pve-swap`, `pve-root`, `pve-data` LVS increased
+Finally `pve-swap`, `pve-root`, `pve-data` LVS increased. Hope this will help others!.
