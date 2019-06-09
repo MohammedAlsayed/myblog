@@ -2,10 +2,16 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
+cd public
+
+git pull
+
+# Build the project.
+cd ..
+hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+
 cd public
 # Add changes to git.
 git add .
